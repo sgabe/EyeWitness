@@ -145,12 +145,13 @@ def create_cli_parser():
         else:
             args.d = os.path.join(os.getcwd(), args.d)
 
-        if not os.access(os.path.dirname(args.d), os.W_OK):
-            print '[*] Error: Please provide a valid folder name/path'
-            parser.print_help()
-            sys.exit()
-        else:
-            if os.path.isdir(args.d):
+        if os.path.isdir(args.d):
+            if not os.access(os.path.dirname(args.d), os.W_OK):
+                print '[*] Error: Please provide a valid folder name/path'
+                parser.print_help()
+                sys.exit()
+
+            if not args.no_prompt:
                 overwrite_dir = raw_input(('Directory Exists! Do you want to '
                                            'overwrite? [y/n] '))
                 overwrite_dir = overwrite_dir.lower().strip()
@@ -159,12 +160,13 @@ def create_cli_parser():
                           'directory to write to!')
                     sys.exit()
                 elif overwrite_dir == 'y':
-                    shutil.rmtree(args.d)
                     pass
                 else:
                     print('Quitting since you didn\'t provide '
                           'a valid response...')
                     sys.exit()
+
+            shutil.rmtree(args.d)
 
     else:
         output_folder = args.date.replace(
