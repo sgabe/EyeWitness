@@ -32,6 +32,10 @@ def create_driver(cli_parsed, user_agent=None):
         webdriver: PhantomJS Webdriver
     """
     capabilities = DesiredCapabilities.PHANTOMJS
+
+    if cli_parsed.vhost_name:
+        capabilities['phantomjs.page.customHeaders.Host'] = cli_parsed.vhost_name
+
     service_args = []
     phantomjs_path = os.path.join(
         os.path.dirname(os.path.realpath(__file__)), '..', 'bin', 'phantomjs')
@@ -49,6 +53,8 @@ def create_driver(cli_parsed, user_agent=None):
     if cli_parsed.proxy_ip is not None and cli_parsed.proxy_port is not None:
         service_args.append(
             '--proxy={0}:{1}'.format(cli_parsed.proxy_ip, cli_parsed.proxy_port))
+        if "socks" in cli_parsed.proxy_type:
+            service_args.append('--proxy-type=socks5')
 
     # PhantomJS resource timeout
     capabilities[
@@ -116,26 +122,38 @@ def capture_host(cli_parsed, http_object, driver, ua=None):
 
     # Retry block for a timeout
     if http_object.error_state == 'Timeout':
-        http_object.error_state = None
-        try:
-            driver.get(http_object.remote_system)
-        except TimeoutException:
-            print '[*] Hit timeout limit when connecting to {0}'.format(http_object.remote_system)
-            http_object.error_state = 'Timeout'
-            http_object.page_title = 'Timeout Limit Reached'
-            return http_object, driver
-        except KeyboardInterrupt:
-            print '[*] Skipping: {0}'.format(http_object.remote_system)
-            http_object.error_state = 'Skipped'
-            http_object.page_title = 'Page Skipped by User'
-            return http_object, driver
-        except httplib.BadStatusLine:
-            print '[*] Bad status line when connecting to {0}'.format(http_object.remote_system)
-            http_object.error_state = 'BadStatus'
-            return http_object, driver
-        except WebDriverException:
-            print '[*] WebDriverError when connecting to {0}'.format(http_object.remote_system)
-            http_object.error_state = 'BadStatus'
+        retry_counter = 0
+        return_status = False
+        while retry_counter < cli_parsed.max_retries:
+            http_object.error_state = None
+            try:
+                driver.get(http_object.remote_system)
+                break
+            except TimeoutException:
+                print '[*] Hit timeout limit when connecting to {0}'.format(http_object.remote_system)
+                http_object.error_state = 'Timeout'
+                http_object.page_title = 'Timeout Limit Reached'
+                return_status = True
+            except KeyboardInterrupt:
+                print '[*] Skipping: {0}'.format(http_object.remote_system)
+                http_object.error_state = 'Skipped'
+                http_object.page_title = 'Page Skipped by User'
+                return_status = True
+                break
+            except httplib.BadStatusLine:
+                print '[*] Bad status line when connecting to {0}'.format(http_object.remote_system)
+                http_object.error_state = 'BadStatus'
+                return_status = True
+                break
+            except WebDriverException:
+                print '[*] WebDriverError when connecting to {0}'.format(http_object.remote_system)
+                http_object.error_state = 'BadStatus'
+                return_status = True
+                break
+            retry_counter += 1
+
+        # Determine if I need to return the objects
+        if return_status:
             return http_object, driver
 
     # Get our headers using urllib2
@@ -164,8 +182,12 @@ def capture_host(cli_parsed, http_object, driver, ua=None):
         responsecode = e.code
         if responsecode == 404:
             http_object.category = 'notfound'
-        if responsecode == 403 or responsecode == 401:
+        elif responsecode == 403 or responsecode == 401:
             http_object.category = 'unauth'
+        elif responsecode == 500:
+            http_object.category = 'inerror'
+        elif responsecode == 400:
+            http_object.category = 'badreq'
         headers = dict(e.headers)
         headers['Response Code'] = str(e.code)
     except urllib2.URLError as e:

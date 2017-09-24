@@ -49,6 +49,8 @@ class DB_Manager(object):
         c = self.connection.cursor()
         obj = HTTPTableObject()
         obj.remote_system = remote_system
+        if cli_parsed.active_scan: 
+            obj._active_scan = True
         obj.set_paths(
             cli_parsed.d, 'baseline' if cli_parsed.cycle is not None else None)
         obj.max_difference = cli_parsed.difference
@@ -144,7 +146,7 @@ class DB_Manager(object):
                               (o.id,)).fetchall()
             for ua in uadat:
                 uao = pickle.loads(str(ua['object']))
-                if uao is not None:
+                if uao is not None and uao.source_code is not None and o.source_code:
                     o.add_ua_data(uao)
             finished.append(o)
         c.close()

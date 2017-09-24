@@ -119,7 +119,7 @@ TeraStation PRO;txtAuthLoginUser;name="frmNas";View TeraStation manual|TeraData 
 <title>Brother HL-2270DW series</title>;/printer/main.html?weblang='+ wlang|Brother HL-2270DW - admin/access
 <title>Brother HL-5350DN series</title>;src="/pbio/key_admin.gif"|Brother HL-5350DN - admin/access
 <title>Brother HL-5070N series;http://solutions.brother.com/cgi-bin/solutions.cgi;/printer/online.html?|Brother HL-5070N - admin/access
-<title>Citrix Login</title>;function checkform;Here goes the logic to allow bookmarked URLs|Cisco Netscaler - nsroot/nsroot
+<title>Citrix Login</title>;function checkform;if (form.username.value === "");if (form.password.value === "")|Cisco Netscaler - nsroot/nsroot or nsrecover/nsroot
 <title>.::Welcome to ZyXEL P-660HN-51::.</title>;if ( loginrandom == '1' ) {;function framLoad () {|ZyXEL P-660HN-51 Modem - admin/1234
 <title>Brother HL-2250DN series</title>;function setCookie(key, val);Brother Industries, Ltd. All Rights Reserved|Brother HL-2250DN - admin/access
 <title>Brother HL-2130 series</title>;function setCookie(key, val);getCookie('webLang')|Brother HL-2130 - admin/access
@@ -129,3 +129,96 @@ TeraStation PRO;txtAuthLoginUser;name="frmNas";View TeraStation manual|TeraData 
 Synology DiskStation;content="Multitasking,Web Application,Personal Cloud";Don't contain any text node to avoid IE insertBefore bug|Synology Diskstation - admin/<blank>
 <script type="text/javascript">;frameWorkObj = {};frameWorkObj.pkg = "ews";href="/framework/Unified.css" rel="stylesheet" type="text/css"|HP OfficeJet Pro X576dw MFP - admin/<nopass>
 <title>DigitalSi HVR / NVR Gateway</title>;form method="post" action="/login.cgi";Namo WebEditor|DigitalSI HVR/DVR - administrator/<nopassword>
+<title>SolarWinds Virtualization Manager</title>;var message = "{action:'setFrameStatus',status:'loaded'}";link href="history/history.css" type="text/css"|SolarWinds Virtualization Manager - admin/admin
+<title>Citrix CloudBridge - Login</title>;var err_map = { "SESS_CORRUPTED": "Session expired or killed. Please login."};function checkHTTP()|Citrix CloudBridge - admin/password
+<title>SolarWinds Log &amp; Event Manager</title>;var requiredMajorVersion;var MMredirectURL = window.location;allowMultipleConsoleSessions|SolarWinds Log and Event Manager - manager/password
+<meta content="WEBUI LOGIN PAGE" name="others" /><title>Gaia</title>;var hostname=;/cgi-bin/home.tcl|Checkpoint Gaia - admin/admin
+<title>HP Insight Control server provisioning</title>;Hewlett-Packard Development Company;hp-authn-provider-name|HP Insight Control Server Provisioning - administrator/admin
+<title>ManageEngine EventLog Analyzer;function userType(ADAuthEnabled);function GetXmlHttpObject();function loadLogin()|ManageEngine EventLog Analyzer - admin/admin or guest/guest
+<title>SAP NetWeaver Portal</title>;var webpath = "/caportallogon_new/;<script>var hash = document.location.hash;certLogonForm|SAP Netweaver - SAP*/06071992 or TMSADM/$1Pawd2&
+<title>Brother HL-5370DW series</title>;onchange="changeLanguage();</tbody></table>|Brother HL-5370DW admin/access
+<title>Welcome to Service Assistant</title>;var clusterAddressLabel = "System Address";BM Storwize V7000 Service Assistant Tool |IBM Storwize V7000 superuser password = passw0rd
+a class="login-page-logo" title="Go to;CA Performance Center;form id="frmSignIn" class="aui-form" method="post" action="sign-in-process.jsp"|CA Performance Center admin/admin or user/user
+<head><title>Log In</title>;Log in to begin an administrative session.;PCoIP;Idle Timeout:|PCoIP System teradici/4400Dominion (possibly SSH Pass)
+Licensed to the Apache Software Foundation;<title>Apache Tomcat</title>;If you're seeing this page via a web browser, it means you've setup Tomcat successfully. Congratulations!|Apache Tomcat tomcat/tomcat admin/admin etc.
+<h1>Apache Tomcat;Manager Application HOW-TO;<span>Manager App</span></a>;For security, access to the|Apache Tomcat tomcat/tomcat admin/admin etc.
+<title>AlienVault USM;function save_hash();To reset your password please login using ssh to your AlienVault device|AlienVault USM ADMIN/<PASSSENTBYALIENTVALUT> if on AWS admin/<instance-id>
+<title>AppInternals Xpert;Transaction Trace Warehouse;<div id="login-nav-menu"><div><div class="productSuiteName">APM Xpert|Appinternals XPert admin/admin
+<title>Avocent DSView 4</title>;Avocent DSView 4 Software End User License Agreement;Point and Click Access and Control|DSView 4 - username and pass specified at install
+<title>Axeda Policy Server</title>;Please log in.</td>;EMC Corporation|Axeda Policy Server admin/EMCPMAdm7n
+<title>Cisco Secure ACS Login</title>;function checkBroserCompatability();Cisco Secure ACS|Cisco ACS Login - ACSAdmin/default (changed at config)
+<title>Cisco Systems Login</title>;<input type="button" onclick="loginAction()" name="bSubmit " value="Login" style="cursor:pointer;<meta name="GENERATOR" content=|Cisco Wireless LAN Controller password set during config
+<title>Dell OpenManage </title>;<frame src="/servlet/Login?omacmd=getlogin&amp;page=Login"|Dell OpenManage windows auth
+EMC SourceOne Search Logon;<div class="aspNetHidden">;function __doPostBack(eventTarget, eventArgument)|EMC SourceOne Login - Windows auth
+<title>Foglight</title>;<td><label for="user">User Name:</label></td>;<td><label for="password">Password:</label></td>;Dell Inc. ALL RIGHTS RESERVED|Dell Foglight - foglight/foglight
+<title>HP Systems Insight Manager</title>;function preloadOne(url);Obtain an exported HP Systems Insight Manager server certificate file from the administrator|HP Systems Insight Manger - Windows Auth
+Login;The vShield Manager requires cookies;You must enable JavaScript in order to administer vShield Manager;VMware, Inc|vShield Manager - admin/default
+<title>OPNET Authentication Service Login</title>;function onDocumentLoad();function checkVersion();Riverbed Technology. All rights reserved|OPNET Authentication Service - admin/opnet
+RPM Dashboards - Login;Riverbed Technology. All rights reserved;form onsubmit="return onFormSubmit()|Riverbed RPM Dashboards - username and pass set at install
+<title>Sign in;Stratusphere</title>;var gProduct = 'ADMINISTRATION';var activePage = 'IManagerLoginPage'|Liquidware Labs - ssadmin/sspassword
+<title>Trend Micro Smart Protection Server</title>;<body onload="javascript:init();Trend Micro Incorporated. All Rights Reserved|Smart Protection Server - admin and root pass set at install
+<title>ipMonitor - Log In</title>;window.onload = function();function go_to_secure_page();SolarWinds. All Rights Reserved|ipMonitor - user and pass set at install
+<title>vRealize Operations Manager</title>;Ext.onReady(function();var userNameField = new Ext.form.TextField|vRealize Operations Manager - user and pass set at console during install
+Default Authentication : iR-ADV C5030 : iR-ADV C5030;login/image/favicon.ico;<span id="deviceName">iR-ADV C5030| Canon ImageRunner admin - 7654321   or   admin - 7654321/7654321
+<title>NETGEAR GS748Tv5</title>;function DisplayErrorMsg();<td class="font10Bold padding4Top">Password</td>|NetGear GS748Tv5 <nousername>/password
+/acsadmin/cues_images/login_progress.gif;checkServerStatus;<label for="username"><nobr>Username:</nobr>|Cisco ACSAdmin - ACSAdmin/default
+<head><title>NPort Web Console</title>;function option_up(sel);theform.MD5Password.value = md5_pass|Moxa NPort Device - admin/<nopassword>
+OnCommand System Manager</title><style>;">Password</div></td><td align=;id="gwt-debug-UserNameTextField"|OnCommand System Manager - Uses system account
+<title>QUANTUM - Scalar i500 Login Screen - scgqtape</title>;var bLoggingin = false;function comboKey(idEdit, idSel)|Quantum i500 - service/ser001
+<nobr>Cisco Edge 300 Series</nobr>;<form action="/" method="post">;div class="cuesLayoutCopyright" id="cuesLayoutCopyright|Cisco Edge 300 Series - cisco/cisco
+<title>HP BladeSystem Onboard Administrator</title>;function getAlertManager();name="MX_HIDDEN" id="MX_HIDDEN"|HP BladeSystem Onboard Admin - Uses username and pass specified on physical document
+<title>Server Login</title>;Viewer.unload();page.init();<div class="container" id="heading">|Datazen Server Login - password set at install
+<!--<title class="clsTitle1">TopAccess</title>-->;var gblTopWindow;var eFilingTitle;var gblTAUrl|TopAccess Printer admin/123456
+<title>Configuration Summary - PageScope Web Connection</title>;<div class="devicename-layout" cellpadding="0" cellspacing="0">Model Name:bizhub C224e</div>;onmouseover="ContentsDragDropRegist('MC_OutputTray')|Konica Minolta Bizhub C224e - admin/12345678 or admin/1234567812345678
+<title>TransPort WR21;Configuration and Management</title>;function checkLoginInfo(form);<div class="tile_templates_container">|TransPort WR21 - username/password
+<title>NETGEAR GSM7352SV2</title>;<script src="/base/js/ng_tabs_Layer2.js";function pausecomp(millis);function DisplayErrorMsg()|Netgear GSM7352S - admin/<nopassword>
+<title>HUAWEI Home Gateway HG658d</title;Navbar======================top menu=;<ul class="nav pull-left logo_png|Huawei HG658 - vodafone/admin or vodafone/admin1234
+<title>Login Page</title>;function to_submit();function init();action="/login.cgi" method="post" name="login" id="frm"|Cisco Phone Adapter Configuration Utility - admin/admin
+To view the Web interface of your device, JavaScript must be supported and enabled on your browser!;function disable_fields(theForm);function alignByClassFlag(node);TG582n';Technicolor|Technicolor TG582n - admin/serialnumber
+TM2AuthLogin_Form.LoginPasswordValue;TM2AuthLogin_Form.LoginNameValue;function SubmitForm();Streamyx Connection|Streamyx Connection - tmadmin/Adm@<last4ofmacaddress>
+<title>Intelbras - Configura;form method="post" action="/cgi-bin/firmware.cgi" name="f";<table class="tbLoginCenter">;td class="tdLoginLeft"|Intelbras WOM 5000 - admin/admin
+<title>HG8245H</title>;this.UserName = UserName;this.HintPassword = HintPassword;var ProductName = 'HG8245H';Username.focus()|Telmex HG8245H - telecomadmin/admintelecom
+script djconfig="parseOnLoad: true, isDebug;Equalizer Configuration;span dojoattachevent="onclick;Password;/dojo/dojo/resources|Coyote Point look/look or touch/touch
+Sign in</title>;div id="center" style="opacity: 1;div id="middleSection";Use of this Riverbed product is subject to the Riverbed;If you don't know your username or password please;var helpButtonContainer = Y.one|Riverbed Device admin/admin
+<title>ManageEngine - ADAudit Plus</title>;.greentxtbold1;var isPasswordChanged;function searchKeyPress(event);password = decryptPassword(encPassword)|admin/admin
+Paessler AG - The Network Monitoring Company;/images/prtg_network_monitor.png;You can not access all features of PRTG with this browser!;label for="loginpassword">Password</label>;input type="radio" name="loginurl"|PRTG - prtgadmin/prtgadmin
+<!-- BUFFALO LIBS -->;if (success) {;create_features_obj();var rawData = result.responseText;var data = response.data|Buffalo Linkstation - admin/password
+<title>Login</title>;body id="login" class="no-menu";usernamefld;passwordfld;/css/pfSense.css|PFSense admin/pfsense (Changed at install)
+Please enable the browser cookie before login RPC2K;RPC2</font></b></p></th>;document.cookie="testcookie"|Emerson Network Power admin/admin
+<IMG SRC="logo.png" ALT="[Logo]">;<H1>Zebra Technologies<BR>;ZTC 170Xi4-300dpi ZPL</H1>;<H2>Printer Home Page</H2>|Zebra Printer <nousername>/1234 or admin/1234
+<title>Workbench Login</title>;<div id="loginFormContainer">;Username</label>;Password</label>|Oracle Commerce admin/admin
+<meta http-equiv="Content-Type" content="text/html;<label id="lapassword" name="lapassword"></label>;Hikvision Digital Technology Co., Ltd;span class="loginbtn" onclick="doLogin()" onmousemove="this.className='loginbtnon'|Hikvision Cameras admin/12345
+Copyright 2010-2012, Nimble Storage;LoginPage.generation;com.nimblestorage.nimbus.NimbusEntryPoint.nocache.js;base64|Nimble Storage admin/admin
+<h1><a id="bitnami-link" href="redmine/">Access BitNami Redmine Stack</a></h1>;The BitNami Project was created to help spread;To enter the application please click on the link at the top of the page|Bitnami Redmine Stack <user>/<pass> Set during Install
+Password Reset - Self Service</title>;top.location = self.location;adminlogin.html;desc resetDesc|NervePoint administrator/administrator (unconfirmed)
+Octopus Deploy'">Octopus Deploy</title>;Checking your credentials. Please wait...;Use a custom expression;dynamicallyGeneratedContent|Octopus Deploy - Local or Domain account for authentication
+<h1>Welcome to VisualSVN Server!</h1>;<title>VisualSVN Server</title>;<a href="/svn/">Repositories</a>|VisualSVN - Accounts created after install or Windows Auth
+/images/prtg_network_monitor.png;PRTG Network Monitor;loginpassword;This may considerably slow down|PRTG Network Monitor - prtgadmin/prtgadmin
+<title></title>;<span>Barracuda</span>;base64_encode;passwords over HTTP are what they are. Use HTTPS;Barracuda Networks;function obfuscatePassword|Barracuda Web Filter - admin/admin
+<Title>ConfigSummary</Title>;<LangNo>En</LangNo>;DN71B7;DN73B1;DN88B2;EngType;IsAral65|Olivetti Printer - Password 12345678 or administrator
+This <a class="device_noun">access point;is trying to join a network or find;simple-tabs-content container;your_hideable_connection_info|Cisco Meraki - serial number/<nopassword>
+<h1>Zebra Technologies<br>;Internal Wired PrintServer;Status:;Printer Home Page;View and Modify Printer Settings|printer
+<title>Web Connection</title>;function popupCopyright;font color="red";Lang.cgi?LangSelect;i3ddgspc.gif|printer
+<title>Login</title>;img src="/inc/errorbubble.gif;class="tt_form_row_peer" id='usernamePeer;class="tt_form_row_reqd" id="passwordRqd";<legend>Administrator login</legend>|Cisco Telepresence admin/cisco
+<TITLE>Sony Network Camera SNC-RZ50</TITLE>;ViewerSelect;Sony Corporation|Sony SNC-RZ50 admin/admin
+<title>Fireware XTM User Authentication</title>;Fireware XTM User Authentication web page;var newloc;wgcgi.cgi?|WatchGuard XTM Fireware - admin/readwrite and status/readonly
+<title>User Portal</title>;Date;Expression;necessary files to set up SSL VPN on Linux;jape/jape_prereq_10_prototype.js;Cfg.app=|Sophos UTM admin/<pass set at install>
+RD Web Access;WorkSpaceID;PublicModeTimeout;RedirectorName;tdClaimsDomainUserNameLable;trPasswordExpiredNoChange|Windows Remote Desktop Web Services <username>/<password>
+HTTP;refresh:/cgi-bin/pcast.cgi;url=/cgi-bin/pcast.cgi;<title>PCast</title>|Buffalo PCast Media NAS Server admin/password
+content="BUFFALO INC.";<title>TeraStation;id="frmNas" name="frmNas";C) BUFFALO INC;divAuthSubmitItem|Buffalo TeraStation admin/password && guest/<nopassword>
+parse the RedirectUrl;RedirectQueryString;nameArray;nameArray["RedirectQueryString"]|HP System Management Homepage <OS administrator account>/<os admin password>
+<title>Log In</title>;<div class="imc_ui_log_box_top bg_hpe">;loadErrForm_SUBMIT;centerContentIframeHref;PrimeFaces|HP Intelligent Management Center - admin/admin
+<title>Mitel 5000 Communications Platform</title>;username_vis;encodeURIComponent;login_form;authhash_hidden|Mitel 5000 Communications Platform - admin/itpassw or admin/support
+<a href="/" class="navbar-brand">EMC ViPR</a>;<title>Internal Server Error</title>;HTTPS Connection Required;<div class="well">|EMV ViPR admin/changeme
+"companyName":"Data Domain";"productName":"System Manager";EMC Corporation. All Rights Reserved.|EMC Data Domain admin/<serialnumber>
+<title>Dell Remote Access Controller 5</title>;/cgi/support.html;document.location.replace("/cgi-bin/webcgi/sclogin");frmSubmit|Dell iDRAC root/calvin
+<title>Log In</title>;title="Go to CA Network Flow Analysis" class="login-page-logo";Network Flow Analysis</span>|CA Network Flow Analysis admin/admin
+<p id="powered">Powered by <a href="http://www.ruckuswireless.com">Ruckus Wireless</a></p>;<tr><th>Admin Name</th><td><input class="login_input";<tr><th>Password</th><td><input class="login_input";<title>Log In</title>|Ruckus Wireless admin/password or super/sp-admin
+<link rel="stylesheet" href="resources/webLogin-all.css">;<title>Polycom Login</title>;<meta http-equiv="X-UA-Compatible" content="IE=edge">;Password:</label></div></div></div>;type="text" role="textbox" size="1" name="userName" class="x-form-field x-form-text|Polycom Wireless Polycom/123 (user) Polycom/456 (admin)
+<title>WebTools | Home</title>;<td align="left" valign="middle" class="name">XeroxC70;set_status_refresh_interval|Xerox C70 Printer admin/1111
+<title>S2 Netbox Login</title>;<!--License IFRAME HERE GOES HERE-->;div id="headerframe"|S2 Netbox admin/admin
+<title>Remote Support Portal | Powered by BOMGAR</title>;exitSurveyBox;Show Representatives Help Window;/content/access_key_input.js|Bomgar Device admin/password
+<title>Pritunl</title>;<link rel="icon" type="image/x-icon" href;onSubmit();login-form;var duoUserInput = document.getElementById('duo-username')|Pritunl VPN pritunl/pritunl
+<title>Log In - Juniper Web Device Manager</title>;document.getElementById("antiClickjack");Juniper Networks, Inc.;document.getElementById('errorMsgId')|Juniper Web Device Manager root/<blank>
+var pageRandom=new Date().getTime();var pageRandom=new Date().getTime();<span>Are you sure you want to email an emergency security code?</span>;<div class="qnap-link show">;<div class="qts-tooltip">| QNAP Device admin/admin
+This can be refactored into waitWithCallback;function sendPost( reqUrl, postData, renderPageCallback );//var thisIDRACText = EntityDecode;sendLoginRequest;id="domainDisp" name="domainDisp"|Dell iDrac root/calvin

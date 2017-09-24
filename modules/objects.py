@@ -16,9 +16,11 @@ class HTTPTableObject(object):
         self._http_headers = {}
         self._page_title = None
         self._remote_system = None
+        self._remote_login = None
         self._source_path = None
         self._error_state = None
         self._blank = False
+        self._active_scan = False
         self._uadata = []
         self._source_code = None
         self._max_difference = None
@@ -196,10 +198,16 @@ class HTTPTableObject(object):
         scr_path = os.path.relpath(self.screenshot_path, self.root_path)
         src_path = os.path.relpath(self.source_path, self.root_path)
         html = u""
-        html += ("""<tr>
-        <td><div style=\"display: inline-block; width: 300px; word-wrap: break-word\">
-        <a href=\"{address}\" target=\"_blank\">{address}</a><br>
-        """).format(address=self.remote_system)
+        if self._remote_login is not None:
+            html += ("""<tr>
+            <td><div style=\"display: inline-block; width: 300px; word-wrap: break-word\">
+            <a href=\"{address}\" target=\"_blank\">{address}</a><br>
+            """).format(address=self._remote_login)
+        else:
+            html += ("""<tr>
+            <td><div style=\"display: inline-block; width: 300px; word-wrap: break-word\">
+            <a href=\"{address}\" target=\"_blank\">{address}</a><br>
+            """).format(address=self.remote_system)
 
         if self.resolved is not None and self.resolved is not 'Unknown':
             html += ("""<b>Resolved to:</b> {0}<br>""").format(self.resolved)
@@ -275,7 +283,7 @@ class HTTPTableObject(object):
         return html
 
     def sanitize(self, html):
-        return cgi.escape(html, quote=True)
+        return cgi.escape(html.decode('utf-8', errors='replace'), quote=True)
 
     def add_ua_data(self, uaobject):
         difference = abs(len(self.source_code) - len(uaobject.source_code))
@@ -469,12 +477,12 @@ class VNCRDPTableObject(object):
             html = "<tr><td><b><center>{0}:{1}</center></b><br>".format(
                 self.remote_system, str(self.port))
             html += ("<div id=\"screenshot\"><center>Unable to screenshot<center>"
-                     "</div></td></tr>").format(self._screenshot_path)
+                     "</div></td></tr>").format(self._screenshot_path.split('/')[-2] + '/' + self._screenshot_path.split('/')[-1])
         else:
             html = "<tr><td><b><center>{0}:{1}</center></b><br>".format(
                 self.remote_system, str(self.port))
             html += ("<div id=\"screenshot\"><img src=\"{0}\">"
-                     "</div></td></tr>").format(self._screenshot_path)
+                     "</div></td></tr>").format(self._screenshot_path.split('/')[-2] + '/' + self._screenshot_path.split('/')[-1])
         return html
 
     def set_paths(self, outdir):

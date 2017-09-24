@@ -4,7 +4,6 @@ import socket
 import sys
 import urllib2
 import ssl
-import time
 
 try:
     from ssl import CertificateError as sslerr
@@ -17,6 +16,7 @@ try:
     from selenium.common.exceptions import TimeoutException
     from selenium.common.exceptions import UnexpectedAlertPresentException
     from selenium.common.exceptions import WebDriverException
+    from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 except ImportError:
     print '[*] Selenium not found.'
     print '[*] Please run the script in the setup directory!'
@@ -51,12 +51,17 @@ def create_driver(cli_parsed, user_agent=None):
 
     # Set up our proxy information directly in the firefox profile
     if cli_parsed.proxy_ip is not None and cli_parsed.proxy_port is not None:
-        profile.set_preference('network.proxy.type', 1)
-        profile.set_preference('network.proxy.http', cli_parsed.proxy_ip)
-        profile.set_preference(
-            'network.proxy.http_port', cli_parsed.proxy_port)
-        profile.set_preference('network.proxy.ssl', cli_parsed.proxy_ip)
-        profile.set_preference('network.proxy.ssl_port', cli_parsed.proxy_port)
+	profile.set_preference('network.proxy.type', 1)
+        if "socks" in cli_parsed.proxy_type:
+	    profile.set_preference('network.proxy.socks', cli_parsed.proxy_ip)
+	    profile.set_preference('network.proxy.socks_port', cli_parsed.proxy_port)
+	    profile.set_preference('network.proxy.socks_remote_dns', True)
+	else:
+	    profile.set_preference('network.proxy.http', cli_parsed.proxy_ip)
+	    profile.set_preference(
+		'network.proxy.http_port', cli_parsed.proxy_port)
+	    profile.set_preference('network.proxy.ssl', cli_parsed.proxy_ip)
+	    profile.set_preference('network.proxy.ssl_port', cli_parsed.proxy_port)
 
     profile.set_preference('app.update.enabled', False)
     profile.set_preference('browser.search.update', False)
@@ -66,7 +71,9 @@ def create_driver(cli_parsed, user_agent=None):
     profile.set_preference('capability.policy.default.Window.prompt', 'noAccess');
 
     try:
-        driver = webdriver.Firefox(profile)
+        capabilities = DesiredCapabilities.FIREFOX.copy()
+        capabilities.update({'acceptInsecureCerts': True})
+        driver = webdriver.Firefox(profile, capabilities=capabilities)
         driver.set_page_load_timeout(cli_parsed.timeout)
         return driver
     except Exception as e:
@@ -75,7 +82,7 @@ def create_driver(cli_parsed, user_agent=None):
             print 'You can fix this by installing Firefox/Iceweasel\
              or using phantomjs/ghost'
         else:
-            print 'Unknown Error when creating selenium driver. Exiting'
+            print e
         sys.exit()
 
 
@@ -124,29 +131,41 @@ def capture_host(cli_parsed, http_object, driver, ua=None):
 
     # If we hit a timeout earlier, retry once
     if http_object.error_state == 'Timeout':
-        http_object.error_state = None
-        try:
-            driver.get(http_object.remote_system)
-        except TimeoutException:
-            # Another timeout results in an error state and a return
-            print '[*] Hit timeout limit when connecting to {0}'.format(http_object.remote_system)
-            http_object.error_state = 'Timeout'
-            http_object.page_title = 'Timeout Limit Reached'
-            http_object.headers = {}
-            driver.quit()
-            driver = create_driver(cli_parsed, ua)
-            return http_object, driver
-        except KeyboardInterrupt:
-            print '[*] Skipping: {0}'.format(http_object.remote_system)
-            http_object.error_state = 'Skipped'
-            http_object.page_title = 'Page Skipped by User'
-        except httplib.BadStatusLine:
-            print '[*] Bad status line when connecting to {0}'.format(http_object.remote_system)
-            http_object.error_state = 'BadStatus'
-            return http_object, driver
-        except WebDriverException:
-            print '[*] WebDriverError when connecting to {0}'.format(http_object.remote_system)
-            http_object.error_state = 'BadStatus'
+        retry_counter = 0
+        return_status = False
+        while retry_counter < cli_parsed.max_retries:
+            http_object.error_state = None
+            try:
+                driver.get(http_object.remote_system)
+                break
+            except TimeoutException:
+                # Another timeout results in an error state and a return
+                print '[*] Hit timeout limit when connecting to {0}'.format(http_object.remote_system)
+                http_object.error_state = 'Timeout'
+                http_object.page_title = 'Timeout Limit Reached'
+                http_object.headers = {}
+                driver.quit()
+                driver = create_driver(cli_parsed, ua)
+                return_status = True
+            except KeyboardInterrupt:
+                print '[*] Skipping: {0}'.format(http_object.remote_system)
+                http_object.error_state = 'Skipped'
+                http_object.page_title = 'Page Skipped by User'
+                break
+            except httplib.BadStatusLine:
+                print '[*] Bad status line when connecting to {0}'.format(http_object.remote_system)
+                http_object.error_state = 'BadStatus'
+                return_status = True
+                break
+            except WebDriverException:
+                print '[*] WebDriverError when connecting to {0}'.format(http_object.remote_system)
+                http_object.error_state = 'BadStatus'
+                return_status = True
+                break
+            retry_counter += 1
+
+        # Determine if I need to return the objects
+        if return_status:
             return http_object, driver
 
         try:
@@ -160,7 +179,6 @@ def capture_host(cli_parsed, http_object, driver, ua=None):
     except WebDriverException as e:
         print('[*] Error saving web page screenshot'
               ' for ' + http_object.remote_system)
-    
 
     # Get our headers using urllib2
     context = None
@@ -188,8 +206,12 @@ def capture_host(cli_parsed, http_object, driver, ua=None):
         responsecode = e.code
         if responsecode == 404:
             http_object.category = 'notfound'
-        if responsecode == 403 or responsecode == 401:
+        elif responsecode == 403 or responsecode == 401:
             http_object.category = 'unauth'
+        elif responsecode == 500:
+            http_object.category = 'inerror'
+        elif responsecode == 400:
+            http_object.category = 'badreq'
         headers = dict(e.headers)
         headers['Response Code'] = str(e.code)
     except urllib2.URLError as e:

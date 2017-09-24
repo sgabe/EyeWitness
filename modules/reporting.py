@@ -9,7 +9,9 @@ except ImportError:
     sys.exit()
 
 
-def process_group(data, group, toc, toc_table, page_num, section, sectionid, html):
+def process_group(
+        data, group, toc, toc_table, page_num, section,
+        sectionid, html):
     """Retreives a group from the full data, and creates toc stuff
 
     Args:
@@ -154,19 +156,28 @@ def sort_data_and_write(cli_parsed, data):
                   ('cms', 'Content Management System (CMS)', 'cms'),
                   ('idrac', 'IDRAC/ILo/Management Interfaces', 'idrac'),
                   ('nas', 'Network Attached Storage (NAS)', 'nas'),
+                  ('construction', 'Under Construction', 'construction'),
                   ('netdev', 'Network Devices', 'netdev'),
                   ('voip', 'Voice/Video over IP (VoIP)', 'voip'),
                   ('unauth', '401/403 Unauthorized', 'unauth'),
                   ('notfound', '404 Not Found', 'notfound'),
                   ('crap', 'Splash Pages', 'crap'),
                   ('printer', 'Printers', 'printer'),
+                  ('successfulLogin', 'Successful Logins', 'successfulLogin'),
+                  ('identifiedLogin', 'Identified Logins', 'identifiedLogin'),
+                  ('infrastructure', 'Infrastructure', 'infrastructure'),
+                  ('redirector', 'Redirecting Pages', 'redirector'),
+                  ('badhost', 'Invalid Hostname', 'badhost'),
+                  ('inerror', 'Internal Error', 'inerror'),
+                  ('badreq', 'Bad Request', 'badreq'),
+                  ('serviceunavailable', 'Service Unavailable', 'serviceunavailable'),
                   ]
     if total_results == 0:
         return
     # Initialize stuff we need
     pages = []
     toc = create_report_toc_head(cli_parsed.date, cli_parsed.time)
-    toc_table = "<table class=\"toc_table\">"
+    toc_table = "<table class=\"table\">"
     web_index_head = create_web_index_head(cli_parsed.date, cli_parsed.time)
     table_head = create_table_head()
     counter = 1
@@ -289,7 +300,7 @@ def create_web_index_head(date, time):
     """
     return ("""<html>
         <head>
-        <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\"/>
+        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" type=\"text/css\"/>
         <title>EyeWitness Report</title>
         <script src="jquery-1.11.3.min.js"></script>
         <script type="text/javascript">
@@ -313,7 +324,7 @@ def create_web_index_head(date, time):
 def search_index_head():
     return ("""<html>
         <head>
-        <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\"/>
+        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" type=\"text/css\"/>
         <title>EyeWitness Report</title>
         <script src="jquery-1.11.3.min.js"></script>
         <script type="text/javascript">
@@ -360,7 +371,7 @@ def vnc_rdp_table_head():
 def vnc_rdp_header(date, time):
     web_index_head = ("""<html>
     <head>
-    <link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\"/>
+    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" type=\"text/css\"/>
     <title>EyeWitness Report</title>
     </head>
     <body>

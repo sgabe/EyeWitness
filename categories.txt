@@ -109,9 +109,9 @@ Cisco Unified IP Phone Cisco Communicator;<img src="/FS/Logo.png";/CGI/Java/Serv
 <title>IIS7</title>;<img width="571" height="411" alt="IIS7" src="welcome.png"|crap
 <p>In Tomcat 8.0 access to the manager application is split between;<title>Apache Tomcat/;<pre>$CATALINA_HOME/RUNNING.txt</pre>|highval
 <title>Test Page for the Apache HTTP Server on Red Hat Enterprise Linux</title>;<h1>Red Hat Enterprise Linux <strong>Test Page|crap
-<title>Welcome to VMware vSphere</title>;<meta content="VMware VirtualCenter is virtual infrastructure software for partitioning, consolidating and managing systems in mission-critical environments.|crap
+<title>Welcome to VMware vSphere</title>;<meta content="VMware VirtualCenter is virtual infrastructure software for partitioning, consolidating and managing systems in mission-critical environments.|virtualization
 title="VMware vFabric, Cloud Application Platform";<p>This is the default vFabric tc Server Runtime home page|crap
-content="VMware ESXi is virtual infrastructure software for partitioning, consolidating, and managing systems in mission-critical environments.;document.write(ID_ESX_VIClientDesc)|crap
+content="VMware ESXi is virtual infrastructure software for partitioning, consolidating, and managing systems in mission-critical environments.;document.write(ID_ESX_VIClientDesc)|virtualization
 src="./cgi-bin/dynamic/topbar.html" target="Main" name="Printer Information" />;<!-- Title in case of ENA's is not a single variable so it is a function -->|printer
 <strong>Cisco IP Conference Station CP-7937G</strong>;src="/Logo";<title>Cisco Systems, Inc.|voip
 <img src="/FS/Logo.png";size="4">Cisco IP Phone CP-7961G-GE;/CGI/Java/Serviceability?|voip
@@ -133,7 +133,6 @@ div.hpGasGaugeBlock;div.hpPageText;HP LaserJet;MFP Series</title>|printer
 <img src="welcome.png" alt="IIS7" width="571" height="411"></a>|crap
 <frame src="/index_top.htm" name="Banner" noresize="noresize";<frame src="/index_top_2.htm" name="Tabs" noresize="noresize";<frame src="/index_down.htm" name="Main";name="PhoneHome"|printer
 Polycom '+GetCurrentPageName ()+'</title>');document.title = sysName+' - Polycom '+model|voip
-wp-login.php";Log in</a>;title="Powered by WordPress|highval
 <a href="http://solutions.brother.com/cgi-bin/solutions.cgi?;alt="Brother"|printer
 <img src="iis-85.png";go.microsoft.com/fwlink;IIS Windows|crap
 jenkins;yuiResizeMonitor;projectstatus|highval
@@ -171,7 +170,7 @@ OS X Server;Welcome to Server;com.apple.entity.Page|crap
 Welcome to OS X Server;/xcode;/profilemanager|crap
 Synology DiskStation;full-featured network attached;logo-synology|nas
 Under Construction</title>;The site you are trying to view does not|crap
-Welcome to VMware vSphere;Getting Started;ID_ForAdmins|crap
+Welcome to VMware vSphere;Getting Started;ID_ForAdmins|virtualization
 qnap-lib;myqnapcloud.com;logo-img x-abs-layout|nas
 var thisIDRACText = EntityDecode(" This iDRAC") //" This iDRAC"|idrac
 Avaya G450 - Avaya Device Manager;Welcome to the Avaya G450 Manager|netdev
@@ -210,8 +209,8 @@ Manage this JBoss AS Instance;href="css/jboss.css";/admin-console/|highval
 "css/jboss.css";/jmx-console/;JBoss Enterprise Application Platform|highval
 JBoss Application Server 7... it's here.;Administration Console;jboss_community.png|highval
 Welcome to WildFly 8;jboss_community.png;Your WildFly 8 is running|highval
-VMware ESXi Server is virtual infrastructure software for partitioning, consolidating, and managing systems in mission-critical environments.;ID_EESX_Welcome|crap
-VMware VirtualCenter is virtual infrastructure software for partitioning;VMware-viclient.exe|crap
+VMware ESXi Server is virtual infrastructure software for partitioning, consolidating, and managing systems in mission-critical environments.;ID_EESX_Welcome|virtualization
+VMware VirtualCenter is virtual infrastructure software for partitioning;VMware-viclient.exe|virtualization
 XEROX ColorQube  - Status;SyncTreeToThisUrl|printer
 XEROX WORKCENTRE;/index.dhtml;/status/tree.php|printer
 Sun(TM) Integrated Lights Out Manager;Display Product Version;/Images/sun/2.2|idrac
@@ -223,7 +222,7 @@ iLO 3;js/iLO.js;js/supersleight-min;Hewlett-Packard Development Company|idrac
 <title>Brother HL-2270DW series</title>;/printer/main.html?weblang='+ wlang|printer
 <title>Brother HL-5350DN series</title>;src="/pbio/key_admin.gif"|printer
 <title>Brother HL-5070N series;http://solutions.brother.com/cgi-bin/solutions.cgi;/printer/online.html?|printer
-<title>Citrix Login</title>;function checkform;Here goes the logic to allow bookmarked URLs|infrastructure
+<title>Citrix Login</title>;function checkform;if (form.username.value === "");if (form.password.value === "")|infrastructure
 <title>.::Welcome to ZyXEL P-660HN-51::.</title>;if ( loginrandom == '1' ) {;function framLoad () {|netdev
 <title>Brother HL-2250DN series</title>;function setCookie(key, val);Brother Industries, Ltd. All Rights Reserved|printer
 <title>Brother HL-2130 series</title>;function setCookie(key, val);getCookie('webLang')|printer
@@ -233,3 +232,102 @@ iLO 3;js/iLO.js;js/supersleight-min;Hewlett-Packard Development Company|idrac
 Synology DiskStation;content="Multitasking,Web Application,Personal Cloud";Don't contain any text node to avoid IE insertBefore bug|infrastructure
 <script type="text/javascript">;frameWorkObj = {};frameWorkObj.pkg = "ews";href="/framework/Unified.css" rel="stylesheet" type="text/css"|printer
 <title>DigitalSi HVR / NVR Gateway</title>;form method="post" action="/login.cgi";Namo WebEditor|camera
+<title>SolarWinds Virtualization Manager</title>;var message = "{action:'setFrameStatus',status:'loaded'}";link href="history/history.css" type="text/css"|virtualization
+<title>Citrix CloudBridge - Login</title>;var err_map = { "SESS_CORRUPTED": "Session expired or killed. Please login."};function checkHTTP()|infrastructure
+<title>SolarWinds Log &amp; Event Manager</title>;var requiredMajorVersion;var MMredirectURL = window.location;allowMultipleConsoleSessions|logging
+<meta content="WEBUI LOGIN PAGE" name="others" /><title>Gaia</title>;var hostname=;/cgi-bin/home.tcl|infrastructure
+<title>Microsoft Internet Information Services 8</title>;<img class="hero" alt="Microsoft Internet Information Services 8.0";<img class="brand" alt="Microsoft Windows Server" src="ws8-brand.png"|crap
+width="960" height="600" alt="IIS" src="iis-85.png" />;<title>IIS Windows Server</title>;background-color:#0072C6|crap
+<title>HP Insight Control server provisioning</title>;Hewlett-Packard Development Company;hp-authn-provider-name|virtualization
+<title>ManageEngine EventLog Analyzer;function userType(ADAuthEnabled);function GetXmlHttpObject();function loadLogin()|logging
+<title>SAP NetWeaver Portal</title>;var webpath = "/caportallogon_new/;<script>var hash = document.location.hash;certLogonForm|infrastructure
+<title>Brother HL-5370DW series</title>;onchange="changeLanguage();</tbody></table>|printer
+Check the address for typing errors such;Please contact the web site owners to inform them of this problem;<title>Problem loading page</title>|notfound
+<title>Welcome to Service Assistant</title>;var clusterAddressLabel = "System Address";BM Storwize V7000 Service Assistant Tool|infrastructure
+a class="login-page-logo" title="Go to;CA Performance Center;form id="frmSignIn" class="aui-form" method="post" action="sign-in-process.jsp"|infrastructure
+<head><title>Log In</title>;Log in to begin an administrative session.;PCoIP;Idle Timeout:|infrastructure
+<title>AlienVault USM;function save_hash();To reset your password please login using ssh to your AlienVault device|infrastructure
+<title>AppInternals Xpert;Transaction Trace Warehouse;<div id="login-nav-menu"><div><div class="productSuiteName">APM Xpert|infrastructure
+<title>Avocent DSView 4</title>;Avocent DSView 4 Software End User License Agreement;Point and Click Access and Control|infrastructure
+<title>Axeda Policy Server</title>;Please log in.</td>;EMC Corporation|infrastructure
+<title>Cisco Secure ACS Login</title>;function checkBroserCompatability();Cisco Secure ACS||netdev
+<title>Cisco Systems Login</title>;<input type="button" onclick="loginAction()" name="bSubmit " value="Login" style="cursor:pointer;<meta name="GENERATOR" content=|netdev
+<title>Dell OpenManage </title>;<frame src="/servlet/Login?omacmd=getlogin&amp;page=Login"|highval
+EMC SourceOne Search Logon;<div class="aspNetHidden">;function __doPostBack(eventTarget, eventArgument)|infrastructure
+<title>Foglight</title>;<td><label for="user">User Name:</label></td>;<td><label for="password">Password:</label></td>;Dell Inc. ALL RIGHTS RESERVED|infrastructure
+<title>HP Systems Insight Manager</title>;function preloadOne(url);Obtain an exported HP Systems Insight Manager server certificate file from the administrator|infrastructure
+Login;The vShield Manager requires cookies;You must enable JavaScript in order to administer vShield Manager;VMware, Inc|infrastructure
+<title>OPNET Authentication Service Login</title>;function onDocumentLoad();function checkVersion();Riverbed Technology. All rights reserved|infrastructure
+RPM Dashboards - Login;Riverbed Technology. All rights reserved;form onsubmit="return onFormSubmit()|infrastructure
+<title>Sign in;Stratusphere</title>;var gProduct = 'ADMINISTRATION';var activePage = 'IManagerLoginPage'|infrastructure
+<title>Trend Micro Smart Protection Server</title>;<body onload="javascript:init();Trend Micro Incorporated. All Rights Reserved|infrastructure
+<title>ipMonitor - Log In</title>;window.onload = function();function go_to_secure_page();SolarWinds. All Rights Reserved|infrastructure
+<title>vRealize Operations Manager</title>;Ext.onReady(function();var userNameField = new Ext.form.TextField|infrastructure
+Default Authentication : iR-ADV C5030 : iR-ADV C5030;login/image/favicon.ico;<span id="deviceName">iR-ADV C5030|printer
+<title>NETGEAR GS748Tv5</title>;function DisplayErrorMsg();<td class="font10Bold padding4Top">Password</td>|infrastructure
+/acsadmin/cues_images/login_progress.gif;checkServerStatus;<label for="username"><nobr>Username:</nobr>|infrastructure
+<head><title>NPort Web Console</title>;function option_up(sel);theform.MD5Password.value = md5_pass|infrastructure
+OnCommand System Manager</title><style>;">Password</div></td><td align=;id="gwt-debug-UserNameTextField"|infrastructure
+<title>QUANTUM - Scalar i500 Login Screen - scgqtape</title>;var bLoggingin = false;function comboKey(idEdit, idSel)|infrastructure
+<nobr>Cisco Edge 300 Series</nobr>;<form action="/" method="post">;div class="cuesLayoutCopyright" id="cuesLayoutCopyright|infrastructure
+<!--<title class="clsTitle1">TopAccess</title>-->;var gblTopWindow;var eFilingTitle;var gblTAUrl|printer
+<title>Configuration Summary - PageScope Web Connection</title>;<div class="devicename-layout" cellpadding="0" cellspacing="0">Model Name:bizhub C224e</div>;onmouseover="ContentsDragDropRegist('MC_OutputTray')|printer
+<title>TransPort WR21;Configuration and Management</title>;function checkLoginInfo(form);<div class="tile_templates_container">|infrastructure
+<title>NETGEAR GSM7352SV2</title>;<script src="/base/js/ng_tabs_Layer2.js";function pausecomp(millis);function DisplayErrorMsg()|infrastructure
+<title>HUAWEI Home Gateway HG658d</title;Navbar======================top menu=;<ul class="nav pull-left logo_png|infrastructure
+<title>Login Page</title>;function to_submit();function init();action="/login.cgi" method="post" name="login" id="frm"|voip
+To view the Web interface of your device, JavaScript must be supported and enabled on your browser!;function disable_fields(theForm);function alignByClassFlag(node);TG582n';Technicolor|infrastructure
+TM2AuthLogin_Form.LoginPasswordValue;TM2AuthLogin_Form.LoginNameValue;function SubmitForm();Streamyx Connection|infrastructure
+<title>Intelbras - Configura;form method="post" action="/cgi-bin/firmware.cgi" name="f";<table class="tbLoginCenter">;td class="tdLoginLeft"|infrastructure
+<title>HG8245H</title>;this.UserName = UserName;this.HintPassword = HintPassword;var ProductName = 'HG8245H';Username.focus()|infrastructure
+<!-- BUFFALO LIBS -->;if (success) {;create_features_obj();var rawData = result.responseText;var data = response.data|nas
+Paessler AG - The Network Monitoring Company;/images/prtg_network_monitor.png;You can not access all features of PRTG with this browser!;label for="loginpassword">Password</label>;input type="radio" name="loginurl"|infrastructure
+script djconfig="parseOnLoad: true, isDebug;Equalizer Configuration;span dojoattachevent="onclick;Password;/dojo/dojo/resources|infrastructure
+<title id=titletext>Under Construction</title>;The site you were trying to reach does not currently have a default page|construction
+<html><body><h1>It works!</h1></body></html>|construction
+<title>Login</title>;body id="login" class="no-menu";usernamefld;passwordfld;/css/pfSense.css|infrastructure
+<title>HP Officejet Pro 6830 e-All-in-One</title>;<div id="pgm-overall-container">;pgm-left-pane-bkground|printer
+<title>Apache HTTP Server Test Page powered by;The website you just visited is either experiencing problems or is undergoing routine maintenance;<p>You should add your website content to the directory <tt>/var/www/html/|crap
+<title id="titleLbl_id">idrac-;iDRAC8 - Login</title>;//  Set the field;//If we fail perform the callback;GUI: Web navigation after session termination|idrac
+Please enable the browser cookie before login RPC2K;RPC2</font></b></p></th>;document.cookie="testcookie"|infrastructure
+iLO.sendJsonRequest("logout", "POST", "json/login_session";$.eventsource("addEventListener", "ui-event-source";function clearApplet()|idrac
+<title>Login - OpenStack Dashboard</title>;/* Load angular modules extensions list before we;<input type="password" value="" name="fake_password|infrastructure
+<title>GigaVUE-HB1 - Login</title>;function HidePasswordString();function ProcessKeyEvent(e)|infrastructure
+<IMG SRC="logo.png" ALT="[Logo]">;<H1>Zebra Technologies<BR>;ZTC 170Xi4-300dpi ZPL</H1>;<H2>Printer Home Page</H2>|printer
+<title>Login</title>;img src="/inc/errorbubble.gif;class="tt_form_row_peer" id='usernamePeer;class="tt_form_row_reqd" id="passwordRqd";<legend>Administrator login</legend>|infrastructure
+Copyright 2010-2012, Nimble Storage;LoginPage.generation;com.nimblestorage.nimbus.NimbusEntryPoint.nocache.js;base64|infrastructure
+<h1><a id="bitnami-link" href="redmine/">Access BitNami Redmine Stack</a></h1>;The BitNami Project was created to help spread;To enter the application please click on the link at the top of the page|infrastructure
+Password Reset - Self Service</title>;top.location = self.location;adminlogin.html;desc resetDesc|infrastructure
+Octopus Deploy'">Octopus Deploy</title>;Checking your credentials. Please wait...;Use a custom expression;dynamicallyGeneratedContent|infrastructure
+<h1>Welcome to VisualSVN Server!</h1>;<title>VisualSVN Server</title>;<a href="/svn/">Repositories</a>|infrastructure
+/images/prtg_network_monitor.png;PRTG Network Monitor;loginpassword;This may considerably slow down|infrastructure
+<title></title>;<span>Barracuda</span>;base64_encode;passwords over HTTP are what they are. Use HTTPS;Barracuda Networks;function obfuscatePassword|infrastructure
+<Title>ConfigSummary</Title>;<LangNo>En</LangNo>;DN71B7;DN73B1;DN88B2;EngType;IsAral65|printer
+This <a class="device_noun">access point;is trying to join a network or find;simple-tabs-content container;your_hideable_connection_info|infrastructure
+<h1>Zebra Technologies<br>;Internal Wired PrintServer;Status:;Printer Home Page;View and Modify Printer Settings|printer
+<title>Web Connection</title>;function popupCopyright;font color="red";Lang.cgi?LangSelect;i3ddgspc.gif|printer
+<TITLE>Sony Network Camera SNC-RZ50</TITLE>;ViewerSelect;Sony Corporation|infrastructure
+<title>Fireware XTM User Authentication</title>;Fireware XTM User Authentication web page;var newloc;wgcgi.cgi?|infrastructure
+<title>User Portal</title>;Date;Expression;necessary files to set up SSL VPN on Linux;jape/jape_prereq_10_prototype.js;Cfg.app=|infrastructure
+RD Web Access;WorkSpaceID;PublicModeTimeout;RedirectorName;tdClaimsDomainUserNameLable;trPasswordExpiredNoChange|infrastructure
+HTTP;refresh:/cgi-bin/pcast.cgi;url=/cgi-bin/pcast.cgi;<title>PCast</title>|infrastructure
+content="BUFFALO INC.";<title>TeraStation;id="frmNas" name="frmNas";C) BUFFALO INC;divAuthSubmitItem|infrastructure
+parse the RedirectUrl;RedirectQueryString;nameArray;nameArray["RedirectQueryString"]|redirector
+<html><head></head><body><h1>Bad Request (Invalid Hostname)</h1></body></html>|badhost
+<h2>Service Unavailable</h2>;HTTP Error 503. The service is unavailable.;<title>Service Unavailable</title>|serviceunavailable
+<title>Log In</title>;<div class="imc_ui_log_box_top bg_hpe">;loadErrForm_SUBMIT;centerContentIframeHref;PrimeFaces|infrastructure
+Management Studio - Redirection;Refresh;ManagementStudio|redirector
+<title>Mitel 5000 Communications Platform</title>;username_vis;encodeURIComponent;login_form;authhash_hidden|infrastructure
+<a href="/" class="navbar-brand">EMC ViPR</a>;<title>Internal Server Error</title>;HTTPS Connection Required;<div class="well">|infrastructure
+"companyName":"Data Domain";"productName":"System Manager";EMC Corporation. All Rights Reserved.|infrastructure
+<title>Dell Remote Access Controller 5</title>;/cgi/support.html;document.location.replace("/cgi-bin/webcgi/sclogin");frmSubmit|idrac
+<title>Log In</title>;title="Go to CA Network Flow Analysis" class="login-page-logo";Network Flow Analysis</span>|infrastructure
+<p id="powered">Powered by <a href="http://www.ruckuswireless.com">Ruckus Wireless</a></p>;<tr><th>Admin Name</th><td><input class="login_input";<tr><th>Password</th><td><input class="login_input";<title>Log In</title>|infrastructure
+<link rel="stylesheet" href="resources/webLogin-all.css">;<title>Polycom Login</title>;<meta http-equiv="X-UA-Compatible" content="IE=edge">;Password:</label></div></div></div>;type="text" role="textbox" size="1" name="userName" class="x-form-field x-form-text|infrastructure
+<title>WebTools | Home</title>;<td align="left" valign="middle" class="name">XeroxC70;set_status_refresh_interval|printer
+<title>S2 Netbox Login</title>;<!--License IFRAME HERE GOES HERE-->;div id="headerframe"|infrastructure
+<title>Remote Support Portal | Powered by BOMGAR</title>;exitSurveyBox;Show Representatives Help Window;/content/access_key_input.js|infrastructure
+<title>Pritunl</title>;<link rel="icon" type="image/x-icon" href;onSubmit();login-form;var duoUserInput = document.getElementById('duo-username')|infrastructure
+<title>Log In - Juniper Web Device Manager</title>;document.getElementById("antiClickjack");Juniper Networks, Inc.;document.getElementById('errorMsgId')|infrastructure
+var pageRandom=new Date().getTime();var pageRandom=new Date().getTime();<span>Are you sure you want to email an emergency security code?</span>;<div class="qnap-link show">;<div class="qts-tooltip">|nas
+This can be refactored into waitWithCallback;function sendPost( reqUrl, postData, renderPageCallback );//var thisIDRACText = EntityDecode;sendLoginRequest;id="domainDisp" name="domainDisp"|highval
